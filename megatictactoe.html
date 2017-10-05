@@ -1,0 +1,537 @@
+
+<!DOCTYPE html>
+
+
+
+<html>
+<title>Mega Tic Tac Toe</title>
+<style type="text/css">
+	
+
+.fightClubImage {
+
+	position: absolute;
+	left: 1050px;
+	top: 500px;
+	height: 182px;
+	width: 323px;
+	display: none;
+
+}
+
+.errorText {
+
+	display: none;
+	color: red;
+	position: absolute;
+	left: 850px;
+	top: 500px;
+	width: 200px;
+
+	font-size: 20px;
+	
+}
+
+.bigTable {
+
+	position: absolute;
+	left: 100px;
+}
+
+.rulesHeader {
+
+	position: absolute;
+	top: 1px;
+	left: 1070px;
+	color: red;
+	font-size: 60px;
+}
+
+.ruleText {
+
+	position: absolute;
+
+	top: 100px;
+	left: 850px;
+	color: red;
+	font-size: 20px;
+	width: 700px;
+}
+
+</style>
+<body>
+
+<h1 class = "rulesHeader" >RULES</h1>
+
+<table class = "bigTable" border="10" width="700" height = "700">
+	<tr>
+	<td>
+	<table border = "2" width = "230" height = "230">
+	<tr>
+	<td id = "i1" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i1.id)" >    </td>
+	<td id = "i2" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i2.id)" >    </td>
+	<td id = "i3" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i3.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i4" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i4.id)" >    </td>
+	<td id = "i5" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i5.id)" >    </td>
+	<td id = "i6" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i6.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i7" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i7.id)" >    </td>
+	<td id = "i8" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i8.id)" >    </td>
+	<td id = "i9" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i9.id)" >    </td>
+	</tr>
+ 	</table>
+
+	</td>
+	<td>
+		<table border = "2" width = "230" height = "230">
+	<tr>
+	<td id = "i10" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i10.id)" >    </td>
+	<td id = "i11" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i11.id)" >    </td>
+	<td id = "i12" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i12.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i13" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i13.id)" >    </td>
+	<td id = "i14" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i14.id)" >    </td>
+	<td id = "i15" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i15.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i16" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i16.id)" >    </td>
+	<td id = "i17" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i17.id)" >    </td>
+	<td id = "i18" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i18.id)" >    </td>
+	</tr>
+ 	</table>
+
+
+
+	</td>
+	<td>
+		<table border = "2" width = "230" height = "230">
+	<tr>
+	<td id = "i19" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i19.id)" >    </td>
+	<td id = "i20" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i20.id)" >    </td>
+	<td id = "i21" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i21.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i22" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i22.id)" >    </td>
+	<td id = "i23" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i23.id)" >    </td>
+	<td id = "i24" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i24.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i25" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i25.id)" >    </td>
+	<td id = "i26" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i26.id)" >    </td>
+	<td id = "i27" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i27.id)" >    </td>
+	</tr>
+ 	</table>
+
+
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<table border = "2" width = "230" height = "230">
+	<tr>
+	<td id = "i28" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i28.id)" >    </td>
+	<td id = "i29" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i29.id)" >    </td>
+	<td id = "i30" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i30.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i31" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i31.id)" >    </td>
+	<td id = "i32" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i32.id)" >    </td>
+	<td id = "i33" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i33.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i34" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i34.id)" >    </td>
+	<td id = "i35" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i35.id)" >    </td>
+	<td id = "i36" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i36.id)" >    </td>
+	</tr>
+ 	</table>
+
+	</td>
+	<td>
+	<table border = "2" width = "230" height = "230">
+	<tr>
+	<td id = "i37" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i37.id)" >    </td>
+	<td id = "i38" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i38.id)" >    </td>
+	<td id = "i39" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i39.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i40" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i40.id)" >    </td>
+	<td id = "i41" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i41.id)" >    </td>
+	<td id = "i42" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i42.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i43" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i43.id)" >    </td>
+	<td id = "i44" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i44.id)" >    </td>
+	<td id = "i45" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i45.id)" >    </td>
+	</tr>
+ 	</table>
+
+
+	</td>
+	<td>
+	<table border = "2" width = "230" height = "230">
+	<tr>
+	<td id = "i46" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i46.id)" >    </td>
+	<td id = "i47" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i47.id)" >    </td>
+	<td id = "i48" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i48.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i49" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i49.id)" >    </td>
+	<td id = "i50" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i50.id)" >    </td>
+	<td id = "i51" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i51.id)" >    </td>
+	</tr>
+	<tr> 
+	<td id = "i52" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i52.id)" >    </td>
+	<td id = "i53" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i53.id)" >    </td>
+	<td id = "i54" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i54.id)" >    </td>
+	</tr>
+ 	</table>
+
+	</td>
+	</tr>
+	
+	<tr>
+	<td>
+	<table border = "2" width = "230" height = "230">
+	<tr>
+	<td id = "i55" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i55.id)" >    </td>
+	<td id = "i56" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i56.id)" >    </td>
+	<td id = "i57" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i57.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i58" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i58.id)" >    </td>
+	<td id = "i59" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i59.id)" >    </td>
+	<td id = "i60" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i60.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i61" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i61.id)" >    </td>
+	<td id = "i62" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i62.id)" >    </td>
+	<td id = "i63" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i63.id)" >    </td>
+	</tr>
+ 	</table>
+
+	</td>
+	<td>
+	<table border = "2" width = "230" height = "230">
+	<tr>
+	<td id = "i64" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i64.id)" >    </td>
+	<td id = "i65" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i65.id)" >    </td>
+	<td id = "i66" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i66.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i67" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i67.id)" >    </td>
+	<td id = "i68" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i68.id)" >    </td>
+	<td id = "i69" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i69.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i70" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i70.id)" >    </td>
+	<td id = "i71" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i71.id)" >    </td>
+	<td id = "i72" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i72.id)" >    </td>
+	</tr>
+ 	</table>
+
+
+	</td>
+	<td>
+	<table border = "2" width = "230" height = "230">
+	<tr>
+	<td id = "i73" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i73.id)" >    </td>
+	<td id = "i74" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i74.id)" >    </td>
+	<td id = "i75" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i75.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i76" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i76.id)" >    </td>
+	<td id = "i77" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i77.id)" >    </td>
+	<td id = "i78" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i78.id)" >    </td>
+	</tr>
+	<tr>
+	<td id = "i79" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i79.id)" >    </td>
+	<td id = "i80" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i80.id)"  >    </td>
+	<td id = "i81" style = "background-color: #DCDCDC;" align = "center" width = "30" height = "30" onclick = "testFunc(i81.id)"  >    </td>
+	</tr>
+ 	</table>
+
+	</td>
+	</tr>
+
+
+
+
+
+	
+
+</table>
+
+<p id = "ruletext" class = "ruleText">1) The first move can be anywhere. All subsequent moves must be played in the 3x3 square corresponding to the index of the opponent's move in their 3x3 square<br><br>2) When a player wins a 3x3 square, it can no longer be played in. Forcing an opponent that square will lead to a free move, where they can play anywhere.</p>
+
+
+<p id = "error" class = "errorText" >Hey big guy, what's the first rule?</p>
+<img id = "errorPic" src = "http://nerdist.com/wp-content/uploads/2016/04/visual_fight_01-04162016.jpg" class = "fightClubImage">
+<button id = "first" onclick = "testFunc()" style = "display: none;">test</button>
+</body>
+
+<script>
+
+var isXturn = 1;
+
+var xBoardsWon = []
+
+var board = [i1.id, i2.id, i3.id, i4.id, i5.id, i6.id, i7.id, i8.id, i9.id, i10.id, i11.id, i12.id, i13.id, i14.id, i15.id, i16.id, i17.id, i18.id, i19.id, i20.id, i21.id, i22.id, i23.id, i24.id, i25.id, i26.id, i27.id, i28.id, i29.id, i30.id, i31.id, i32.id, i33.id, i34.id, i35.id, i36.id, i37.id, i38.id, i39.id, i40.id, i41.id, i42.id, i43.id, i44.id, i45.id, i46.id, i47.id, i48.id, i49.id, i50.id, i51.id, i52.id, i53.id, i54.id, i55.id, i56.id, i57.id, i58.id, i59.id, i60.id, i61.id, i62.id, i63.id, i64.id, i65.id, i66.id, i67.id, i68.id, i69.id, i70.id, i71.id, i72.id, i73.id, i74.id, i75.id, i76.id, i77.id, i78.id, i79.id, i80.id, i81.id];
+
+var previousIndex = 1;
+var freeMove = 1;
+
+
+function testFunc(id) {
+
+
+	
+
+	var legalMove = false;
+	var boardIndex = 0;
+
+for (var i = 0; i < board.length; i++) {
+
+	if (board[i] == id) {
+
+		boardIndex = i;
+		//document.getElementById(id).innerHTML = (Math.floor(boardIndex / 9));
+
+	}
+}
+
+//boardIndex++;
+//document.getElementById("i81").innerHTML = (previousIndex % 9);
+
+if (Math.floor(boardIndex / 9) == (previousIndex % 9)) {
+
+	legalMove = true;
+	//document.getElementById(id).innerHTML = "7";
+}
+else {
+
+	document.getElementById("error").style.display = "block";
+	document.getElementById("errorPic").style.display = "block";
+}
+
+if (freeMove == 1) {
+	legalMove = true;
+}
+
+
+//legalMove = true;
+if (document.getElementById(id).innerHTML == "    " &&  legalMove == true) {
+
+	if (isXturn == 1){
+	
+	document.getElementById(id).innerHTML = "X";
+	document.getElementById(id).style.fontSize = "x-large";
+	document.getElementById(id).style.backgroundColor = "#FFFFFF";
+
+	isXturn = 0;
+	
+	} else {
+		document.getElementById(id).innerHTML = "O";
+		document.getElementById(id).style.fontSize = "x-large";
+		document.getElementById(id).style.backgroundColor = "#FFFFFF";
+		isXturn = 1;
+	}
+	document.getElementById("error").style.display = "none";
+	document.getElementById("errorPic").style.display = "none";
+
+
+	var currSquareStart = Math.floor(boardIndex / 9) * 9;
+	squareWon(currSquareStart);
+
+
+
+
+
+
+	previousIndex = boardIndex;
+	
+
+}
+
+
+
+
+
+
+
+freeMove = 0;
+	
+}
+
+
+function squareWon(index) {
+
+	//document.getElementById("ruletext").innerHTML = index;
+
+if (document.getElementById(board[index]).innerHTML == document.getElementById(board[index + 1]).innerHTML &&
+	document.getElementById(board[index]).innerHTML == document.getElementById(board[index + 2]).innerHTML && 
+	document.getElementById(board[index]).innerHTML != "    ") {
+
+	//document.getElementById("ruletext").innerHTML = "Past 3 check?";
+
+	if (isXturn == 0) {
+		//document.getElementById("ruletext").innerHTML = "Past xTurn check?";
+		changeToBigX(index); 
+	}
+	else {
+		changetoBigO(index);
+	}
+}
+
+if (document.getElementById(board[index + 3]).innerHTML == document.getElementById(board[index + 4]).innerHTML &&
+	document.getElementById(board[index + 3]).innerHTML == document.getElementById(board[index + 5]).innerHTML && 
+	document.getElementById(board[index + 3]).innerHTML != "    ") {
+
+	//document.getElementById("ruletext").innerHTML = "Past 3 check?";
+
+	if (isXturn == 0) {
+		//document.getElementById("ruletext").innerHTML = "Past xTurn check?";
+		changeToBigX(index);
+	}
+	else {
+		changetoBigO(index);
+	}
+}
+
+if (document.getElementById(board[index + 6]).innerHTML == document.getElementById(board[index + 7]).innerHTML &&
+	document.getElementById(board[index + 6]).innerHTML == document.getElementById(board[index + 8]).innerHTML && 
+	document.getElementById(board[index + 6]).innerHTML != "    ") {
+
+	//document.getElementById("ruletext").innerHTML = "Past 3 check?";
+
+	if (isXturn == 0) {
+		//document.getElementById("ruletext").innerHTML = "Past xTurn check?";
+		changeToBigX(index);
+	}
+	else {
+		changetoBigO(index);
+	}
+}
+
+if (document.getElementById(board[index]).innerHTML == document.getElementById(board[index + 3]).innerHTML &&
+	document.getElementById(board[index]).innerHTML == document.getElementById(board[index + 6]).innerHTML && 
+	document.getElementById(board[index]).innerHTML != "    ") {
+
+	//document.getElementById("ruletext").innerHTML = "Past 3 check?";
+
+	if (isXturn == 0) {
+		//document.getElementById("ruletext").innerHTML = "Past xTurn check?";
+		changeToBigX(index);
+	}
+	else {
+		changetoBigO(index);
+	}
+}
+
+if (document.getElementById(board[index + 1]).innerHTML == document.getElementById(board[index + 4]).innerHTML &&
+	document.getElementById(board[index + 1]).innerHTML == document.getElementById(board[index + 7]).innerHTML && 
+	document.getElementById(board[index + 1]).innerHTML != "    ") {
+
+	//document.getElementById("ruletext").innerHTML = "Past 3 check?";
+
+	if (isXturn == 0) {
+		//document.getElementById("ruletext").innerHTML = "Past xTurn check?";
+		changeToBigX(index);
+	}
+	else {
+		changetoBigO(index);
+	}
+}
+
+if (document.getElementById(board[index + 2]).innerHTML == document.getElementById(board[index + 5]).innerHTML &&
+	document.getElementById(board[index + 2]).innerHTML == document.getElementById(board[index + 8]).innerHTML && 
+	document.getElementById(board[index + 2]).innerHTML != "    ") {
+
+	//document.getElementById("ruletext").innerHTML = "Past 3 check?";
+
+	if (isXturn == 0) {
+		//document.getElementById("ruletext").innerHTML = "Past xTurn check?";
+		changeToBigX(index);
+	}
+	else {
+		changetoBigO(index);
+	}
+}
+
+if (document.getElementById(board[index]).innerHTML == document.getElementById(board[index + 4]).innerHTML &&
+	document.getElementById(board[index]).innerHTML == document.getElementById(board[index + 8]).innerHTML && 
+	document.getElementById(board[index]).innerHTML != "    ") {
+
+	//document.getElementById("ruletext").innerHTML = "Past 3 check?";
+
+	if (isXturn == 0) {
+		//document.getElementById("ruletext").innerHTML = "Past xTurn check?";
+		changeToBigX(index);
+	}
+	else {
+		changetoBigO(index);
+	}
+}
+
+if (document.getElementById(board[index + 2]).innerHTML == document.getElementById(board[index + 4]).innerHTML &&
+	document.getElementById(board[index + 2]).innerHTML == document.getElementById(board[index + 6]).innerHTML && 
+	document.getElementById(board[index + 2]).innerHTML != "    ") {
+
+	//document.getElementById("ruletext").innerHTML = "Past 3 check?";
+
+	if (isXturn == 0) {
+		document.getElementById("ruletext").innerHTML = "xTurn?";
+		changeToBigX(index);
+	}
+	else {
+		//document.getElementById("ruletext").innerHTML = "oTurn";
+		changeToBigO(index);
+	}
+}
+
+
+
+
+
+
+}
+
+
+function changeToBigX(index) {
+
+	for (var i = index; i < index + 9; i++) {	
+
+	document.getElementById(board[i]).innerHTML = "X";
+	document.getElementById(board[i]).style.fontSize = "x-large";
+	document.getElementById(board[i]).style.backgroundColor = "#FFFFFF";
+
+
+	}
+
+}
+
+function changeToBigO(index) {
+
+	for (var i = index; i < index + 9; i++) {	
+
+	document.getElementById(board[i]).innerHTML = "O";
+	document.getElementById(board[i]).style.fontSize = "x-large";
+	document.getElementById(board[i]).style.backgroundColor = "#FFFFFF";
+
+
+	}
+
+}
+
+
+
+
+</script>
+
+
+
+
+</html>

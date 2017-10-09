@@ -62,11 +62,93 @@ text-decoration: underline;
 }
 
 
+.writeup {
+  transition: all linear 0.5s;
+  
+  background-color: lightblue;
+  
+  font-family: 'Montserrat', sans-serif; 
+  margin-right: 20px;
+  z-index: 0; position: absolute;
+  top: 250px; left: 850px; 
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  font-size: 20px;
+ 
+}
 
+.writeup.ng-hide {
+
+  transition: all linear 0.5s;
+  opacity: 0;
+  
+}
+
+.writeup2 {
+  transition: all linear 0.5s;
+  
+  background-color: lightblue;
+  
+  font-family: 'Montserrat', sans-serif; 
+  margin-right: 20px;
+  z-index: 0; position: absolute;
+  top: 250px; left: 850px; 
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  font-size: 20px;
+ 
+}
+
+.writeup2.ng-hide {
+
+  transition: all linear 0.5s;
+  opacity: 0;
+  
+}
+
+.writeup3 {
+  transition: all linear 0.5s;
+  
+  background-color: lightblue;
+  
+  font-family: 'Montserrat', sans-serif; 
+  margin-right: 20px;
+  z-index: 0; position: absolute;
+  top: 250px; left: 850px; 
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  font-size: 20px;
+ 
+}
+
+.writeup3.ng-hide {
+
+  transition: all linear 0.5s;
+  opacity: 0;
+  
+}
+
+
+.expandButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: -1;
+}
+
+.expandButton:hover{
+    background-color: #3e8e41;
+}
 
 </style>
 
-<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+
+<body ng-app="myApp">
 
 <ul style = "position: fixed; top:0px;">
   <li><a href="declancallisto.html">Home</a></li>
@@ -99,29 +181,46 @@ text-decoration: underline;
 
 
 
-<div style = "z-index: -1; background-color: white; position: absolute; left: 780px; top: 50px; height: 1000px; width: 500px;">
 
-<p style = "font-family: 'Montserrat', sans-serif; margin-right: 20px;">
+
+<button class = "expandButton" ng-click = "showFirst = !showFirst" style = "position: absolute; top: 240px; left: 690px;">ABOUT ></button>
+<p class = "writeup" ng-show = "showFirst" >
 Cross Campus gave me my first opportunity to create software in a professsional setting. During this internship, I used a varying combination of HTML, CSS, PHP, and MySQL to create web apps. I'm particularly proud of an inventory database web app, because I worked on both the front and back end design, and saw the project through to completion. I would love to drop a link here and show it off, but unfortunately it contains company-sensitive information!
 </p>
-<br><br>
-<p style = "font-family: 'Montserrat', sans-serif; margin-right: 20px;">
+
+
+
+
+
+
+
+
+
+
+<button class = "expandButton" ng-click = "showSecond = !showSecond" style = "position: absolute; top: 470px; left: 690px;">ABOUT ></button>
+<p class = "writeup2" ng-show = "showSecond" >
 I've really enjoyed this position because:<br>
     1) I'm kind of a math nerd<br>
     2) Explaining concepts like graph theory and runtime analysis have helped me understand the topics even better, and improve my own code.<br>
 As part of the job, I've also had to lead review sessions for over a hundred students in giant lecture halls; a daunting task considering I had very little public speaking experience prior. However, it's given me a chance to step out of my comfort zone, and I now feel confident teaching material in this setting.
-
 </p>
 
 
-<br><br><br><br>
 
-<p style = "font-family: 'Montserrat', sans-serif; margin-right: 20px;">
+
+
+
+
+
+
+
+<button class = "expandButton" ng-click = "showThird = !showThird" style = "position: absolute; top: 850px; left: 690px;">ABOUT ></button>
+<p class = "writeup3" ng-show = "showThird" >
 I spent this summer teaching middle/high school age kids about the basics of object-oriented programming, a really cool opportunity that I wish I had done at their age. We ran into a few hiccups with effort levels, as you might expect from any educational summer camp that parents sign their kids up for. But seeing them proudly present their projects at the end of the camp really made my time at BadgerBots worthwhile.
 </p>
 
 
-</div>
+
 
 
 
@@ -149,4 +248,12 @@ I spent this summer teaching middle/high school age kids about the basics of obj
 
 
 </body>
+
+
+
+<script>
+
+var app = angular.module('myApp', ['ngAnimate']);
+
+</script>
 </html>

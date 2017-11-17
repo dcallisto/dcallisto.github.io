@@ -183,7 +183,7 @@ text-decoration: underline;
 
 
 
-<button class = "expandButton" ng-click = "showFirst = !showFirst" style = "position: absolute; top: 240px; left: 690px;">ABOUT ></button>
+<button class = "expandButton" ng-click = "showFirst = !showFirst; showSecond = false; showThird = false;" style = "position: absolute; top: 240px; left: 690px;">ABOUT ></button>
 <p class = "writeup" ng-show = "showFirst" >
 Cross Campus gave me my first opportunity to create software in a professsional setting. During this internship, I used a varying combination of HTML, CSS, PHP, and MySQL to create web apps. I'm particularly proud of an inventory database web app, because I worked on both the front and back end design, and saw the project through to completion. I would love to drop a link here and show it off, but unfortunately it contains company-sensitive information!
 </p>
@@ -197,7 +197,7 @@ Cross Campus gave me my first opportunity to create software in a professsional 
 
 
 
-<button class = "expandButton" ng-click = "showSecond = !showSecond" style = "position: absolute; top: 470px; left: 690px;">ABOUT ></button>
+<button class = "expandButton" ng-click = "showSecond = !showSecond; showFirst = false; showThird = false;" style = "position: absolute; top: 470px; left: 690px;">ABOUT ></button>
 <p class = "writeup2" ng-show = "showSecond" >
 I've really enjoyed this position because:<br>
     1) I'm kind of a math nerd<br>
@@ -214,7 +214,7 @@ As part of the job, I've also had to lead review sessions for over a hundred stu
 
 
 
-<button class = "expandButton" ng-click = "showThird = !showThird" style = "position: absolute; top: 850px; left: 690px;">ABOUT ></button>
+<button class = "expandButton" ng-click = "showThird = !showThird; showSecond = false; showFirst = false;" style = "position: absolute; top: 850px; left: 690px;">ABOUT ></button>
 <p class = "writeup3" ng-show = "showThird" >
 I spent this summer teaching middle/high school age kids about the basics of object-oriented programming, a really cool opportunity that I wish I had done at their age. We ran into a few hiccups with effort levels, as you might expect from any educational summer camp that parents sign their kids up for. But seeing them proudly present their projects at the end of the camp really made my time at BadgerBots worthwhile.
 </p>
